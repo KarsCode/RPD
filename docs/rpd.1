@@ -1,0 +1,197 @@
+.\" Automatically generated from an mdoc input file.  Do not edit.
+.\" DATE
+.TH "rpd" "1" "9/3/23" "Linux" "General Commands Manual"
+.nh
+.if n .ad l
+.SH "NAME"
+\fBrpd\fR
+,
+\fBrpd music command\fR
+\- A command-line music player.
+.SH "SYNOPSIS"
+.HP 4n
+\fBrpd\fR
+[OPTIONS]
+[\fIPARTIAL\ FILE\ OR\ DIRECTORY\ NAME\fR]
+.SH "DESCRIPTION"
+\fBrpd\fR
+plays audio from your music folder when given a partial (or whole) file or directory name.
+A playlist is created when finding more than one file.
+It supports gapless playback, 24-bit/192khz audio and MPRIS.
+.PP
+On first use, set a path for the music library (this is a once-only operation):
+.PP
+\fBrpd\fR
+path "/home/joe/Music"
+.PP
+Typical use:
+.PP
+\fBrpd\fR
+artist, album or song name
+.PP
+\fBrpd\fR
+returns results from the location of the first match, it doesn't return every result possible.
+.SH "OPTIONS"
+.TP 9n
+\fB\-h,\fR \fB\--help\fR
+Displays help.
+.TP 9n
+\fB\-v,\fR \fB\--version\fR
+Displays version info.
+.TP 9n
+\fB\--nocover\fR
+Hides the cover.
+.TP 9n
+\fB\--noui\fR
+Completely hides the UI.
+.TP 9n
+\fB\-q,\fR \fB\--quitonstop\fR
+Exits after playing the whole playlist.
+.TP 9n
+\fB\-e,\fR \fB\--exact, 
+Specifies you want an exact (but not case sensitive) match, of for instance an album.
+.TP 9n
+shuffle
+Shuffles the playlist before starting to play it.
+.TP 9n
+dir
+Plays the directory not the song.
+.TP 9n
+song
+Plays the song not the directory.
+.TP 9n
+list
+Searches for a (.m3u) playlist. These are normally not included in searches.
+.SH "EXAMPLES"
+.TP 9n
+rpd
+Start
+\fBrpd\fR
+in library view.
+.TP 9n
+rpd all
+Start
+\fBrpd\fR
+with all songs loaded into a playlist.
+.TP 9n
+rpd albums
+Start
+\fBrpd\fR
+with all albums randomly added one after the other in the playlist.
+.TP 9n
+rpd moonlight son
+Play moonlight sonata.
+.TP 9n
+rpd moon
+.br
+Play moonlight sonata.
+.TP 9n
+rpd nirv
+.br
+Play all music under Nirvana folder shuffled.
+.TP 9n
+rpd neverm
+Play Nevermind album in alphabetical order.
+.TP 9n
+rpd shuffle neverm
+Play Nevermind album shuffled.
+.TP 9n
+rpd list mix
+Play the mix.m3u playlist.
+.TP 9n
+rpd <words A>:<words B>:<words C>
+Play the first match (whole directory or file) found under A, B, and C, shuffled. Searches are separated by a colon ':' character.
+.TP 9n
+rpd .
+Play the rpd.m3u playlist.
+.SH "KEY BINDINGS"
+.TP 9n
++, -
+Adjusts volume.
+.TP 9n
+Left-right arrows/h,l
+Change song.
+.TP 9n
+Space
+Pause.
+.TP 9n
+F2 or Shift+z
+Show playlist view.
+.TP 9n
+F3 or Shift+x
+Show library view.
+.TP 9n
+F4 or Shift+c
+Show track view.
+.TP 9n
+F5 or Shift+v
+Show search view.
+.TP 9n
+F6 or Shift+b
+Show key bindings view.
+.TP 9n
+u
+Update the library.
+.TP 9n
+i
+Toggle colors derived from album cover or from color theme.
+.TP 9n
+v
+Toggle spectrum visualizer.
+.TP 9n
+b
+Switch between ascii and image album cover.
+.TP 9n
+r
+Repeat current song.
+.TP 9n
+s
+Shuffles the playlist.
+.TP 9n
+a
+Seek Backward.
+.TP 9n
+d
+Seek Forward.
+.TP 9n
+"."
+Add to rpd.m3u playlist. Run with "rpd .".
+.TP 9n
+x
+Save currently loaded playlist to a .m3u file in the music folder.
+.TP 9n
+Tab
+Switch between views.
+.TP 9n
+gg
+Go to first song.
+.TP 9n
+number + G, g or Enter
+Go to specific song number in the playlist.
+.TP 9n
+G
+Go to last song.
+.TP 9n
+Esc or q
+Quit
+\fBrpd\fR.
+.SH "FILES"
+.TP 10n
+\fI~/<configfolder>/rpd/rpdrc\fR
+Config file.
+.TP 10n
+\fI~/<configfolder>/rpd/rpdlibrary\fR
+Music library directory tree cache.
+.TP 10n
+\fI/<musicfolder>/rpd.m3u\fR
+The
+\fBrpd\fR
+playlist. Add to it by pressing '.' during playback of any song. This playlist is saved before q exits.
+.SH "COPYRIGHT"
+Copyright \[u00A9] 2023 Ravachol. License GPLv2+: GNU GPL version 2 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+.SH "SEE ALSO"
+Project home page:
+.TP 10n
+\fI<https://github.com/ravachol/rpd>.\fR
