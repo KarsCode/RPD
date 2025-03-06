@@ -1,6 +1,6 @@
 # RPD
 
-🎵 **RPD is a lightweight, feature-rich terminal music player designed for seamless playback, playlist management, and customization. With support for various audio formats, dynamic playlists, and MPRIS integration, RPD offers an immersive listening experience.
+RPD is a lightweight, feature-rich terminal music player designed for seamless playback, playlist management, and customization. With support for various audio formats, dynamic playlists, and MPRIS integration, RPD offers an immersive listening experience.
 
 ---
 
