@@ -87,7 +87,3 @@ sudo make uninstall
 
 ---
 
-## 🤝 Contributing
-We welcome contributions! Feel free to open issues, suggest features, or submit pull requests.
-
-📩 **Feedback & Support:** Have questions or feedback? Join the discussion in [GitHub Issues](https://github.com/your-repo/RPD/issues)!
